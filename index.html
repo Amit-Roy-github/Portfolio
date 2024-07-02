@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Portfolio Website</title>
+   <link rel="shortcut icon" type="x-icon" href="../Images/icons8-portfolio-48.png">
+
+   <!-- ===============Google Font (Montserrat)============ -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Montserrat:wght@300;400;500;600;700;800;900&family=Nunito+Sans&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="../css/index.css">
+
+   <!-- ----Boxicons cdn--- -->
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script> 
+     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+     <link rel="stylesheet" href="../css/icon.css"> <!-- Icon Css -->
+     <!-- ----- Fontawesome cdn --------------- -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+   <!-- =======NavBar Section===== -->
+    <header class="container nav_container ">
+      <!-- <div > -->
+         <a href="index.html"><h4>Amit Roy</h4></a>
+         <div class="nav_menu">
+             <div><a href="#home-section">Home</a></div>
+             <div><a href="#about-section">About</a></div>
+             <div><a href="#project-section">Projects</a></div>
+             <div><a href="#skill-section">Skills</a></div>
+             <div><a href="#contact">Contacts</a></div>
+         </div>
+      <!-- </div> -->
+    </header>
+    <!-- ------ Home Section Start--------- -->
+    <section id="home-section"  >
+      <div class="container home_container">
+         <div class="left" >
+             <span> <h4> Hello !</h4> </span>
+             <h1>I'm <span class="name"> Amit Roy </span></h1>
+             <h3>A <span class="text" > </span></h3>
+             <div class="btn btn-primary" ><a href="https://drive.google.com/file/d/165MUUYsY6wiqachyURGSFMBqjuu8Jzbp/view?usp=drive_link" target="_blank">Resume</a></div>
+
+             <div class="home_sci">
+               <a href="https://www.linkedin.com/in/amit-roy-b28302241/" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+               <a href="https://www.facebook.com/profile.php?id=100026051958466" target="_blank"><i class="uil uil-facebook-f"></i></a>
+               <a href="https://github.com/Amit-Roy-github" target="_blank"><i class="uil uil-github-alt"></i></a>
+               <a href="https://www.instagram.com/aroy104321/" target="_blank"><i class="uil uil-instagram"></i></a>
+             </div>
+         </div>
+         <div class="home_right">
+
+         </div>
+     </div>
+    </section>
+    <!-- ------- Home Section End -------------- -->
+
+    <!-- ------------ About Section ----------  -->
+    <section id="about-section"  >
+       <div class="container about_container">
+         <div class="left">
+             <img src="../Images/pexels-neo-853421-2653362.jpg" alt="">
+         </div>
+         <div class="right">
+            <h3 class="sub_title">About Me </h3>
+            <p>
+               Solving coding Problems and Learning DSA and Algorithm for last two years , Learning Web Developement  along with building Web Pages .
+            </p>
+            <div class="tab_title">
+               <li class="tab_links active_link" onclick="opentab('Experience')">Experience</li>
+               <li class="tab_links" onclick="opentab('Education')">Education</li>
+            </div>
+            <div class="tab_contents active_tab" id="Experience">
+               <ul>
+                  <li>Web Developer</li>
+                  <li>Coder </li>
+               </ul>
+            </div>
+            <div class="tab_contents" id="Education">
+               <ul>
+                  <li>B.tech , NIT Silchar ( 2021 - 2025 ) </li>
+                  <li> CGPA : 8.47 </li>
+                  <li> Course : ECE </li>
+               </ul>
+            </div>
+         </div>
+       </div>
+    </section>
+    <!-- ------------ About Section End  ----------  -->
+
+    <!-- ----------------- Projects Section -------------- -->
+    <section id="project-section">
+       <div class="container project_container">
+         <h3>Projects</h3>
+         <div class="card">
+            <div class="article">
+               <div class="">
+                  <img src="../Images/work-1.png" alt="">
+               </div>
+               <div class="layer">
+                  <h4>Educatainal website</h4>
+                  <p>It is academic website of different Courses using HTML , CSS and JS </p>
+                  <a href="https://shiksha-bice.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               </div>
+            </div>
+            <div class="article">
+               <div class="">
+                  <img src="../Images/work-2.png" alt="">
+               </div>
+               <div class="layer">
+                  <h4>Weather App</h4>
+                  <p>This App shows the weather of cities using fetch Api</p>
+                  <a href="https://weather-app-livid-three-92.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               </div>
+            </div>
+            <div class="article">
+               <div class="">
+                  <img src="../Images/work-3.png" alt="">
+               </div>
+               <div class="layer">
+                  <h4>To-Do App</h4>
+                  <p>This App allows to List down the Tasks that to be done </p>
+                  <a href="https://to-do-app-two-sand.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               </div>
+            </div>
+         </div>
+       </div>
+    </section>
+
+    <!-- ------------- Skill section starts ----------- -->
+     <section id="skill-section">
+       <div class="container skill_container">
+         <div class="head"><h1> Skills </h1></div>
+
+         <div class="content">
+            <div class="item1">
+               <h3 class="skill_h3">Technical skills</h3>
+               <div class="article">
+                  <div class="card">
+                     <a href="https://cplusplus.com/doc/tutorial/" target="_blank"><span class="skill-icons--cpp"></span></a>
+                     <h4>C++</h4>
+                   </div>
+                  <div class="card">
+                     <a href="https://html.com/" target="_blank"><span class="devicon--html5"></span></a>
+                     <h4>HTML</h4>
+                   </div>
+                  <div class="card">
+                     <a href="https://www.w3schools.com/css/css_intro.asp" target="_blank"><span class="devicon--css3"></span></a>
+                     <h4>CSS</h4>
+                   </div>
+                  <div class="card">
+                     <a href="https://www.javascript.com/" target="_blank"><span class="logos--javascript"></span></a>
+                     <h4>JS</h4>
+                   </div>
+                   
+               </div>
+            </div>
+
+            <div class="item2">
+               <h3 class="skill_h3"> Tools Used </h3>
+               <div class="article">
+                  <div class="card">
+                     <a href="https://code.visualstudio.com/" target="_blank"><span class="vscode-icons--file-type-vscode3"></span></a>
+                     <h4>Vs Code</h4>
+                  </div>
+                  <div class="card"> 
+                     <a href="https://github.com/" target="_blank"><span class="uiw--github"></span></a>
+                     <h4>Git Hub</h4>
+                  </div>
+                  <div class="card">
+                     <a href="https://www.sublimetext.com/" target="_blank"><span class="logos--sublimetext-icon"></span></a>
+                     <h4>Sublime Text </h4>
+                  </div>
+               </div>
+             
+            </div>
+
+            <div class="item3">
+               <h3 class="skill_h3">Achivements</h3>
+
+               <div class="item3_content">
+
+                  <div class="article">
+                     <div class="skill_image">
+                        <img src="../Images/leetcode (2).png" alt="">
+                        <h4>LeetCode</h4>
+                     </div>
+                     <div class="info">
+                        <li> Badge : <span class="bold">Knight</span>  </li>
+                        <li>Maximum Rating : <span class="bold">2162</span>  </li>
+                        <li>Solved <span class="bold">1470+</span> problems </li>
+                        <li>Rank <span class="bold">130</span> in Biweekly Contest 129</li>
+                        <li>Rank <span class="bold">271</span> in Weekly Contest 403 </li>
+                      </div>
+                      <a href="https://leetcode.com/u/Amit_321/" target="_blank"><div class="info_btn ">More</div></a>
+                  </div>
+
+                  <div class="article">
+                     <div class="skill_image">
+                        <img src="../Images/code-forces.png" alt="">
+                        <h4>CodeForces</h4>
+                     </div>
+                     <div class="info">
+                        <li> Badge : <span class="bold expert" >Expert </span>  </li>
+                        <li>Maximum Rating : <span class="bold">1615</span> </li>
+                        <li>Solved <span class="bold">580+</span> problems </li>
+                      </div>
+                      <a href="https://codeforces.com/profile/Amit_104" target="_blank"><div class="info_btn ">More</div></a>
+                  </div>
+
+                  <div class="article">
+                     <div class="skill_image">
+                        <img src="../Images/icons8-codechef-480.png" alt="">
+                        <h4>CodeChef</h4>
+                     </div>
+                     <div class="info">
+                        <li> Badge :  <span class="bold">3 ⭐</span> </li>
+                        <li>Maximum Rating : <span class="bold">1739</span>  </li>
+                        <li>Solved <span class="bold">150+</span> problems </li>
+                      </div>
+                      <a href="https://www.codechef.com/users/amit_3201" target="_blank"><div class="info_btn ">More</div></a>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+     </section>
+     <!-- ---- Contact Me section --- -->
+     <section id="contact" class="contact">
+      <div class="contact_text">
+         <h3>Contact <span style="color: #0ef;">Me</span></h3>
+         <h4>Let's Work together</h4>
+         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat hic, odio recusandae corrupti, sit repellendus quia, harum quod officia enim ipsam distinctio quaerat? Fugiat optio dicta, ea autem tenetur quisquam.</p>
+         <div class="contact_list">
+            <li><i class='bx bx-send' ></i>   aroy104321@gmail.com</li>
+            <li><i class='bx bx-phone' ></i>  +91 - 6000108469</li>
+         </div>
+         <div class="contact_icons">
+            <a href="https://www.linkedin.com/in/amit-roy-b28302241/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+            <a href="https://github.com/Amit-Roy-github" target="_blank"><i class='bx bxl-github' ></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100026051958466" target="_blank"><i class='bx bxl-facebook-circle' ></i></a>
+            <a href="https://www.instagram.com/aroy104321/" target="_blank"><i class='bx bxl-twitter'></i></a>
+         </div>
+      </div>
+      <div class="contact_form">
+         <form action="">
+            <input type="text" placeholder="Enter Your Name"  id="name" class="name">
+            <input type="text" placeholder="Enter Your Email"  id="email"  >
+            <input type="text" placeholder="Enter Your Subject"  id="subject">
+            <textarea name="" id="text" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
+            <div   class="submit" id="submit" onclick="message()" >submit </div>
+            <div class="messege">
+               <div class="success" id="success">
+                  Your messege sent successfully  !
+               </div>
+               <div class="danger" id="danger">
+                  Feilds can't be empty.
+               </div>
+            </div>
+         </form>
+      </div>
+     </section>
+
+     <script src="../js/index.js"></script>
+     <script src="https://smtpjs.com/v3/smtp.js">
+   </script>
+</body>
+</html>
