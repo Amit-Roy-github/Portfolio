@@ -1,79 +1,448 @@
-*{
-   margin: 0;padding: 0;
-   outline: 0 ; border: 0 ;
-   text-decoration: none;
-   scroll-behavior: smooth;
-    /* list-style: none; */
-   /* background: var(--color-bg) ; */
-}
-:root{
-   --color-white   : #fff ;
-   --color-black   : #000 ;
-   --color-danger  : #f75842 ;
-   --color-warning : #f7c94b ;
-   --color-succes  : #00bf8e ;
-   --color-primary : #6c63ff ;
-   --color-light   : rgba(255,255, 255 , 0.7) ;
-   --color-bg      : #1f2641 ;
-   --color-bg1     : #2e3267 ;
-   --color-bg2     : #424890 ;
+/* ==================================================================
+   Amit Roy — portfolio
+   Control-plane palette: colour is the state machine's legend, not
+   decoration. Blue = queued, amber = running, green = done, coral =
+   the human gate. Coral appears exactly once on the page.
+   ================================================================== */
 
-   --container-width-sm : 94% ;
-   --container-width-md : 90% ;
-   --container-width-lg : 80% ; 
+:root {
+  color-scheme: dark;
 
-   --transition : all 400ms ease ;
-}
+  --base:    #0E1117;
+  --panel:   #141922;
+  --panel-2: #1A212C;
+  --line:    #232B37;
+  --line-2:  #2E3846;
 
-body{
-   font-family: 'Montserrat', sans-serif;
-   color: var(--color-white) ;
-   line-height: 1.6 ;
-   background-color: var(--color-bg) ;
-}
+  --text:    #E6EDF3;
+  --muted:   #8C99AB;
+  --dim:     #66717F;
 
-h1 , h2 , h3 , h4 , h5 {
-   line-height : 1.3 ; 
+  --queued:  #4C8DFF;
+  --running: #F0A020;
+  --done:    #3FB950;
+  --gate:    #FF7B54;
+
+  --display: "Bricolage Grotesque", "Inter", system-ui, sans-serif;
+  --body:    "Inter", system-ui, -apple-system, sans-serif;
+  --mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --shell: 62rem;
+  --gutter: 1rem;
 }
 
-h1{
-   font-size: 2.4em ;
-}
-h2{
-   font-size: 2em ;
-}
-h3{
-   font-size: 1.6em ;
-}
-h4{
-   font-size: 1.3em ;
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+body {
+  margin: 0;
+  background: var(--base);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
-.container{
-   width: var(--container-width-lg) ;
-   margin: 0 auto ;
-}
-a{
-   background: none;
-   color: var(--color-white);
+h1, h2, h3 { font-family: var(--display); font-weight: 800; line-height: 1.08; margin: 0; letter-spacing: -0.02em; }
+p { margin: 0; }
+b { font-weight: 600; color: var(--text); }
+
+a { color: var(--queued); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+:focus-visible {
+  outline: 2px solid var(--running);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
-img{
-   /* width: 40%; */
-   /* display: block ; */
-   object-fit: cover ;
+.shell { width: 100%; max-width: var(--shell); margin-inline: auto; padding-inline: var(--gutter); }
+
+.skip {
+  position: absolute; left: -9999px; top: 0; z-index: 50;
+  background: var(--running); color: #0E1117; padding: .6rem 1rem; font-weight: 600;
 }
-.btn{
-   display: inline-block ;
-   background: var(--color-white);
-   color: var(--color-black);
-   font-weight: 600 ;
-   border: 1px solid transparent ;
-   border-radius: 6px ;
-   padding: 1rem 2rem;
-   transition: var(--transition) ; 
+.skip:focus { left: 0; }
+
+/* Numerals and identifiers sit in mono because they are data being read
+   for precision, not labels being decorated. */
+.num, .mono { font-family: var(--mono); font-size: .92em; font-weight: 500; color: var(--text); }
+
+/* ----------------------------- top bar ----------------------------- */
+
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(14, 17, 23, .86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
 }
-.btn-primary{
-   color: var(--color-white) ;
-   background: var(--color-danger) ;
+.topbar__inner { display: flex; align-items: center; gap: 1.25rem; height: 3.75rem; }
+
+.mark {
+  display: inline-flex; align-items: center; gap: .55rem;
+  font-family: var(--display); font-weight: 700; font-size: 1.02rem;
+  color: var(--text); letter-spacing: -0.01em;
+}
+.mark:hover { text-decoration: none; }
+.mark__glyph {
+  width: .62rem; height: .62rem; flex: none;
+  background: var(--done);
+  transform: rotate(45deg);
+}
+
+.topnav { margin-left: auto; display: flex; gap: 1.4rem; }
+.topnav a { color: var(--muted); font-size: .9rem; }
+.topnav a:hover { color: var(--text); text-decoration: none; }
+
+.btn {
+  border: 1px solid var(--line-2);
+  color: var(--text);
+  padding: .42rem .95rem;
+  font-size: .875rem; font-weight: 500;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.btn:hover { border-color: var(--queued); color: var(--queued); text-decoration: none; }
+
+/* ------------------------------- hero ------------------------------ */
+
+.hero { padding: clamp(3rem, 9vw, 6rem) 0 clamp(2.5rem, 6vw, 4rem); }
+
+.hero__line {
+  font-size: clamp(2.1rem, 6.2vw, 3.9rem);
+  max-width: 17ch;
+  text-wrap: balance;
+}
+.hero__sub {
+  margin-top: 1.35rem;
+  max-width: 54ch;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.9vw, 1.1rem);
+}
+
+/* ---------------------------- the console -------------------------- */
+
+.console {
+  margin-top: clamp(2.25rem, 5vw, 3.25rem);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.console__bar {
+  display: flex; align-items: baseline; gap: .8rem; flex-wrap: wrap;
+  padding: .7rem 1.1rem;
+  background: var(--panel-2);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--mono); font-size: .78rem;
+}
+.console__name { color: var(--done); font-weight: 700; }
+.console__meta { color: var(--dim); }
+.console__run { margin-left: auto; color: var(--dim); }
+
+.console__body { padding: clamp(1.75rem, 4vw, 2.6rem) clamp(1.1rem, 3vw, 2rem) clamp(1.4rem, 3vw, 1.9rem); }
+
+/* --- pipeline ---
+   One rail, one fill whose length is driven by --p (0 → 1), and dots that
+   flip state as the fill passes them. Both orientations read --p, so the
+   script never needs to know which layout is on screen. */
+
+.pipe {
+  --p: 0;
+  list-style: none; margin: 0; padding: 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 0;
+}
+
+.pipe-wrap { position: relative; }
+
+.pipe__rail {
+  position: absolute;
+  left: 6.25%; right: 6.25%; top: .43rem;
+  height: 2px;
+  background: var(--line-2);
+}
+.pipe__fill {
+  display: block; height: 100%;
+  width: calc(var(--p) * 100%);
+  background: var(--done);
+  transition: width .18s linear;
+}
+
+.pipe__step {
+  grid-column: span 2;
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; gap: .7rem;
+  text-align: center;
+}
+.pipe__step > span {
+  font-family: var(--mono); font-size: .7rem; font-weight: 500;
+  color: var(--dim);
+  transition: color .25s ease;
+}
+.pipe__dot {
+  width: .95rem; height: .95rem; border-radius: 50%;
+  background: var(--base);
+  border: 2px solid var(--line-2);
+  transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.pipe__step.is-live .pipe__dot {
+  border-color: var(--running);
+  background: var(--running);
+  box-shadow: 0 0 0 5px rgba(240, 160, 32, .16);
+}
+.pipe__step.is-live > span { color: var(--running); }
+
+.pipe__step.is-done .pipe__dot {
+  border-color: var(--done);
+  background: var(--done);
+  box-shadow: none;
+}
+.pipe__step.is-done > span { color: var(--text); }
+
+/* The gate is the one decision point, so it is the one shape that is not
+   a circle — and the only place coral appears. */
+.pipe__step--gate .pipe__dot {
+  border-radius: 1px;
+  transform: rotate(45deg);
+  width: .85rem; height: .85rem;
+}
+.pipe__step--gate.is-done .pipe__dot { background: var(--gate); border-color: var(--gate); }
+.pipe__step--gate.is-done > span { color: var(--gate); }
+
+.pipe__off {
+  /* 68.75% is the gate's centre line: six steps of 12.5%, less half a step. */
+  margin: 1.6rem 0 0 68.75%;
+  padding-left: 1.4rem;
+  position: relative;
+  font-size: .82rem;
+  color: var(--dim);
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.pipe__off.is-on { opacity: 1; color: var(--gate); }
+.pipe__off::before {
+  content: ""; position: absolute;
+  left: 0; top: -1.1rem; bottom: .65rem;
+  width: 1rem;
+  border-left: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  border-bottom-left-radius: 6px;
+  opacity: .55;
+}
+
+.console__note {
+  margin-top: clamp(1.7rem, 3.5vw, 2.3rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  max-width: 72ch;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* --- supporting stats --- */
+
+.stats {
+  margin: 1.75rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.stats > div { border-left: 2px solid var(--line-2); padding-left: .9rem; }
+.stats dt { font-size: .78rem; color: var(--dim); line-height: 1.4; }
+.stats dd {
+  margin: .35rem 0 0;
+  font-family: var(--mono); font-weight: 700;
+  font-size: 1.3rem; color: var(--text);
+}
+
+/* ------------------------------ bands ------------------------------ */
+
+.band { padding: clamp(3.25rem, 8vw, 5.5rem) 0; border-top: 1px solid var(--line); }
+.band--end { padding-bottom: clamp(3rem, 7vw, 4.5rem); }
+
+.head {
+  font-size: clamp(1.55rem, 3.6vw, 2.1rem);
+  margin-bottom: clamp(2rem, 4vw, 2.75rem);
+  display: flex; align-items: center; gap: 1.1rem;
+}
+.head::after {
+  content: ""; flex: 1 1 auto; height: 1px; background: var(--line);
+}
+
+/* ------------------------------ work ------------------------------- */
+
+.entry { padding-left: 1.4rem; border-left: 2px solid var(--line-2); }
+.entry + .entry { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+
+.entry__head {
+  display: flex; align-items: baseline; gap: .9rem; flex-wrap: wrap;
+  margin-bottom: 1.1rem;
+}
+.entry__head h3 { font-size: 1.3rem; display: flex; align-items: baseline; gap: .8rem; flex-wrap: wrap; }
+.entry__role {
+  font-family: var(--body); font-weight: 400; font-size: .95rem;
+  color: var(--muted); letter-spacing: 0;
+}
+.entry__when { margin-left: auto; font-family: var(--mono); font-size: .78rem; color: var(--dim); }
+
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.points li {
+  position: relative; padding-left: 1.2rem;
+  color: var(--muted); max-width: 76ch;
+}
+.points li::before {
+  content: ""; position: absolute; left: 0; top: .62rem;
+  width: .32rem; height: .32rem; background: var(--line-2);
+}
+
+/* ---------------------------- projects ----------------------------- */
+
+.proj {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: clamp(1.25rem, 3vw, 1.9rem);
+  background: var(--panel);
+}
+.proj + .proj { margin-top: 1.25rem; }
+
+.proj__head { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.proj__head h3 { font-size: 1.2rem; }
+.proj__when { margin-left: auto; font-family: var(--mono); font-size: .78rem; color: var(--dim); }
+
+.proj__tag { margin: .4rem 0 1.3rem; color: var(--muted); font-size: .95rem; }
+
+.proj .points { margin-bottom: 1.4rem; }
+
+.stack {
+  font-family: var(--mono); font-size: .74rem; color: var(--dim);
+  padding-top: 1rem; border-top: 1px solid var(--line);
+  line-height: 1.8;
+}
+
+.proj__links { margin-top: .9rem; display: flex; gap: 1.3rem; flex-wrap: wrap; font-size: .9rem; }
+
+/* --------------------------- achievements -------------------------- */
+
+.rank { border-top: 1px solid var(--line); }
+
+.rank__row {
+  display: grid;
+  grid-template-columns: 9.5rem 6.5rem 1fr auto;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 0 .85rem;
+  border-bottom: 1px solid var(--line);
+}
+.rank__site { font-weight: 600; }
+.rank__badge { font-family: var(--mono); font-size: .78rem; color: var(--running); }
+.rank__nums { color: var(--muted); font-size: .92rem; }
+.rank__link { font-size: .88rem; }
+
+.rank__sub {
+  padding: .85rem 0 1rem 9.5rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--dim); font-size: .85rem;
+}
+
+/* ------------------------ skills & education ----------------------- */
+
+.kit { margin: 0; display: grid; grid-template-columns: 10.5rem 1fr; gap: 0; }
+.kit dt {
+  font-weight: 600; font-size: .95rem;
+  padding: .95rem 1rem .95rem 0; border-top: 1px solid var(--line);
+}
+.kit dd {
+  margin: 0; color: var(--muted); font-size: .95rem;
+  padding: .95rem 0; border-top: 1px solid var(--line);
+}
+
+.edu { margin-top: clamp(2.5rem, 5vw, 3.25rem); padding-left: 1.4rem; border-left: 2px solid var(--line-2); }
+.edu h3 { font-size: 1.15rem; }
+.edu p { color: var(--muted); font-size: .95rem; margin-top: .4rem; }
+.edu__when { font-family: var(--mono); font-size: .78rem; color: var(--dim); }
+
+/* ----------------------------- contact ----------------------------- */
+
+.contact__lede { max-width: 48ch; color: var(--muted); font-size: 1.05rem; }
+
+.reach { list-style: none; margin: 2rem 0 0; padding: 0; }
+.reach li {
+  display: grid; grid-template-columns: 7rem 1fr auto;
+  align-items: baseline; gap: 1rem;
+  padding: .9rem 0; border-top: 1px solid var(--line);
+}
+.reach li:last-child { border-bottom: 1px solid var(--line); }
+.reach__what { font-size: .82rem; color: var(--dim); }
+.reach__val { font-size: 1.02rem; }
+
+.copy {
+  font: inherit; font-size: .76rem;
+  background: none; color: var(--dim);
+  border: 1px solid var(--line-2); border-radius: 999px;
+  padding: .2rem .7rem; cursor: pointer;
+  transition: color .2s ease, border-color .2s ease;
+}
+.copy:hover { color: var(--text); border-color: var(--line-2); }
+.copy.is-copied { color: var(--done); border-color: var(--done); }
+
+/* ------------------------------ footer ----------------------------- */
+
+.foot { border-top: 1px solid var(--line); padding: 1.6rem 0 2.2rem; }
+.foot__inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.foot p { font-family: var(--mono); font-size: .78rem; color: var(--dim); }
+
+/* ---------------------------- responsive --------------------------- */
+
+@media (max-width: 860px) {
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 1.4rem 1rem; }
+  .rank__row { grid-template-columns: 1fr auto; row-gap: .3rem; }
+  .rank__badge { text-align: right; }
+  .rank__nums { grid-column: 1 / -1; }
+  .rank__link { grid-column: 1 / -1; }
+  .rank__sub { padding-left: 0; }
+  .kit { grid-template-columns: 1fr; }
+  .kit dt { padding-bottom: 0; }
+  .kit dd { border-top: 0; padding-top: .3rem; }
+}
+
+@media (max-width: 720px) {
+  .topnav { display: none; }
+  .btn { margin-left: auto; }
+
+  /* The pipeline turns vertical: same rail, same --p, rotated. */
+  .pipe { grid-template-columns: 1fr; gap: 1.35rem; }
+  .pipe__step { grid-column: 1; }
+  .pipe__rail {
+    left: .43rem; right: auto;
+    top: .66rem; bottom: .66rem;
+    width: 2px; height: auto;
+  }
+  .pipe__fill { width: 100%; height: calc(var(--p) * 100%); transition: height .18s linear; }
+  .pipe__step { flex-direction: row; align-items: center; gap: .9rem; text-align: left; }
+  .pipe__step > span { font-size: .8rem; }
+  .pipe__off {
+    margin: .35rem 0 0 .43rem;
+    padding-left: 1.5rem;
+  }
+  .pipe__off::before { top: -.9rem; bottom: .6rem; }
+
+  .entry__when, .proj__when { margin-left: 0; width: 100%; }
+  .reach li { grid-template-columns: 1fr auto; }
+  .reach__what { grid-column: 1 / -1; }
+}
+
+@media (max-width: 420px) {
+  .stats { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }

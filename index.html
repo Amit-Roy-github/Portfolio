@@ -1,278 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Portfolio Website</title>
-   <link rel="shortcut icon" type="x-icon" href="../Images/icons8-portfolio-48.png">
-
-   <!-- ===============Google Font (Montserrat)============ -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Montserrat:wght@300;400;500;600;700;800;900&family=Nunito+Sans&family=Roboto+Slab&display=swap" rel="stylesheet">
-
-   <link rel="stylesheet" href="../css/style.css">
-   <link rel="stylesheet" href="../css/index.css">
-
-   <!-- ----Boxicons cdn--- -->
-   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-        <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script> 
-     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-     <link rel="stylesheet" href="../css/icon.css"> <!-- Icon Css -->
-     <!-- ----- Fontawesome cdn --------------- -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amit Roy — AI &amp; Backend Engineer</title>
+<meta name="description" content="Amit Roy builds AI agents that run in production — Katlas, an autonomous software engineer that ships support tickets end to end — and the backend systems underneath them.">
+<meta name="author" content="Amit Roy">
+<meta name="theme-color" content="#0E1117">
+<link rel="canonical" href="https://portfolio-flame-five-61.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Amit Roy — AI &amp; Backend Engineer">
+<meta property="og:description" content="I build AI agents that ship to production, not to demos.">
+<meta property="og:url" content="https://portfolio-flame-five-61.vercel.app/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%230E1117'/%3E%3Ccircle%20cx='7'%20cy='16'%20r='2.6'%20fill='%234C8DFF'/%3E%3Cpath%20d='M16%2011l5%205-5%205-5-5z'%20fill='%23F0A020'/%3E%3Ccircle%20cx='25'%20cy='16'%20r='2.6'%20fill='%233FB950'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-   <!-- =======NavBar Section===== -->
-    <header class="container nav_container ">
-      <!-- <div > -->
-         <a href="index.html"><h4>Amit Roy</h4></a>
-         <div class="nav_menu">
-             <div><a href="#home-section">Home</a></div>
-             <div><a href="#about-section">About</a></div>
-             <div><a href="#project-section">Projects</a></div>
-             <div><a href="#skill-section">Skills</a></div>
-             <div><a href="#contact">Contacts</a></div>
-         </div>
-      <!-- </div> -->
-    </header>
-    <!-- ------ Home Section Start--------- -->
-    <section id="home-section"  >
-      <div class="container home_container">
-         <div class="left" >
-             <span> <h4> Hello !</h4> </span>
-             <h1>I'm <span class="name"> Amit Roy </span></h1>
-             <h3>A <span class="text" > </span></h3>
-             <div class="btn btn-primary" ><a href="https://drive.google.com/file/d/165MUUYsY6wiqachyURGSFMBqjuu8Jzbp/view?usp=drive_link" target="_blank">Resume</a></div>
+<a class="skip" href="#main">Skip to content</a>
 
-             <div class="home_sci">
-               <a href="https://www.linkedin.com/in/amit-roy-b28302241/" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
-               <a href="https://www.facebook.com/profile.php?id=100026051958466" target="_blank"><i class="uil uil-facebook-f"></i></a>
-               <a href="https://github.com/Amit-Roy-github" target="_blank"><i class="uil uil-github-alt"></i></a>
-               <a href="https://www.instagram.com/aroy104321/" target="_blank"><i class="uil uil-instagram"></i></a>
-             </div>
-         </div>
-         <div class="home_right">
+<header class="topbar">
+  <div class="shell topbar__inner">
+    <a class="mark" href="#top">
+      <span class="mark__glyph" aria-hidden="true"></span>
+      Amit Roy
+    </a>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#proof">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="./Amit-Roy-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+  </div>
+</header>
 
-         </div>
-     </div>
-    </section>
-    <!-- ------- Home Section End -------------- -->
+<main id="main">
 
-    <!-- ------------ About Section ----------  -->
-    <section id="about-section"  >
-       <div class="container about_container">
-         <div class="left">
-             <img src="../Images/pexels-neo-853421-2653362.jpg" alt="">
-         </div>
-         <div class="right">
-            <h3 class="sub_title">About Me </h3>
-            <p>
-               Solving coding Problems and Learning DSA and Algorithm for last two years , Learning Web Developement  along with building Web Pages .
-            </p>
-            <div class="tab_title">
-               <li class="tab_links active_link" onclick="opentab('Experience')">Experience</li>
-               <li class="tab_links" onclick="opentab('Education')">Education</li>
-            </div>
-            <div class="tab_contents active_tab" id="Experience">
-               <ul>
-                  <li>Web Developer</li>
-                  <li>Coder </li>
-               </ul>
-            </div>
-            <div class="tab_contents" id="Education">
-               <ul>
-                  <li>B.tech , NIT Silchar ( 2021 - 2025 ) </li>
-                  <li> CGPA : 8.47 </li>
-                  <li> Course : ECE </li>
-               </ul>
-            </div>
-         </div>
-       </div>
-    </section>
-    <!-- ------------ About Section End  ----------  -->
+<!-- ========================= HERO ========================= -->
+<section class="hero" id="top">
+  <div class="shell">
+    <h1 class="hero__line">I build AI agents that ship to production, not to demos.</h1>
+    <p class="hero__sub">
+      Software engineer at Khata Buddy. I write the backend systems, and the
+      autonomous agents that run on top of them. Previously at Zupee. B.Tech from NIT Silchar.
+    </p>
 
-    <!-- ----------------- Projects Section -------------- -->
-    <section id="project-section">
-       <div class="container project_container">
-         <h3>Projects</h3>
-         <div class="card">
-            <div class="article">
-               <div class="">
-                  <img src="../Images/work-1.png" alt="">
-               </div>
-               <div class="layer">
-                  <h4>Educatainal website</h4>
-                  <p>It is academic website of different Courses using HTML , CSS and JS </p>
-                  <a href="https://shiksha-bice.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-               </div>
-            </div>
-            <div class="article">
-               <div class="">
-                  <img src="../Images/work-2.png" alt="">
-               </div>
-               <div class="layer">
-                  <h4>Weather App</h4>
-                  <p>This App shows the weather of cities using fetch Api</p>
-                  <a href="https://weather-app-livid-three-92.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-               </div>
-            </div>
-            <div class="article">
-               <div class="">
-                  <img src="../Images/work-3.png" alt="">
-               </div>
-               <div class="layer">
-                  <h4>To-Do App</h4>
-                  <p>This App allows to List down the Tasks that to be done </p>
-                  <a href="https://to-do-app-two-sand.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-               </div>
-            </div>
-         </div>
-       </div>
-    </section>
-
-    <!-- ------------- Skill section starts ----------- -->
-     <section id="skill-section">
-       <div class="container skill_container">
-         <div class="head"><h1> Skills </h1></div>
-
-         <div class="content">
-            <div class="item1">
-               <h3 class="skill_h3">Technical skills</h3>
-               <div class="article">
-                  <div class="card">
-                     <a href="https://cplusplus.com/doc/tutorial/" target="_blank"><span class="skill-icons--cpp"></span></a>
-                     <h4>C++</h4>
-                   </div>
-                  <div class="card">
-                     <a href="https://html.com/" target="_blank"><span class="devicon--html5"></span></a>
-                     <h4>HTML</h4>
-                   </div>
-                  <div class="card">
-                     <a href="https://www.w3schools.com/css/css_intro.asp" target="_blank"><span class="devicon--css3"></span></a>
-                     <h4>CSS</h4>
-                   </div>
-                  <div class="card">
-                     <a href="https://www.javascript.com/" target="_blank"><span class="logos--javascript"></span></a>
-                     <h4>JS</h4>
-                   </div>
-                   
-               </div>
-            </div>
-
-            <div class="item2">
-               <h3 class="skill_h3"> Tools Used </h3>
-               <div class="article">
-                  <div class="card">
-                     <a href="https://code.visualstudio.com/" target="_blank"><span class="vscode-icons--file-type-vscode3"></span></a>
-                     <h4>Vs Code</h4>
-                  </div>
-                  <div class="card"> 
-                     <a href="https://github.com/" target="_blank"><span class="uiw--github"></span></a>
-                     <h4>Git Hub</h4>
-                  </div>
-                  <div class="card">
-                     <a href="https://www.sublimetext.com/" target="_blank"><span class="logos--sublimetext-icon"></span></a>
-                     <h4>Sublime Text </h4>
-                  </div>
-               </div>
-             
-            </div>
-
-            <div class="item3">
-               <h3 class="skill_h3">Achivements</h3>
-
-               <div class="item3_content">
-
-                  <div class="article">
-                     <div class="skill_image">
-                        <img src="../Images/leetcode (2).png" alt="">
-                        <h4>LeetCode</h4>
-                     </div>
-                     <div class="info">
-                        <li> Badge : <span class="bold">Knight</span>  </li>
-                        <li>Maximum Rating : <span class="bold">2162</span>  </li>
-                        <li>Solved <span class="bold">1470+</span> problems </li>
-                        <li>Rank <span class="bold">130</span> in Biweekly Contest 129</li>
-                        <li>Rank <span class="bold">271</span> in Weekly Contest 403 </li>
-                      </div>
-                      <a href="https://leetcode.com/u/Amit_321/" target="_blank"><div class="info_btn ">More</div></a>
-                  </div>
-
-                  <div class="article">
-                     <div class="skill_image">
-                        <img src="../Images/code-forces.png" alt="">
-                        <h4>CodeForces</h4>
-                     </div>
-                     <div class="info">
-                        <li> Badge : <span class="bold expert" >Expert </span>  </li>
-                        <li>Maximum Rating : <span class="bold">1615</span> </li>
-                        <li>Solved <span class="bold">580+</span> problems </li>
-                      </div>
-                      <a href="https://codeforces.com/profile/Amit_104" target="_blank"><div class="info_btn ">More</div></a>
-                  </div>
-
-                  <div class="article">
-                     <div class="skill_image">
-                        <img src="../Images/icons8-codechef-480.png" alt="">
-                        <h4>CodeChef</h4>
-                     </div>
-                     <div class="info">
-                        <li> Badge :  <span class="bold">3 ⭐</span> </li>
-                        <li>Maximum Rating : <span class="bold">1739</span>  </li>
-                        <li>Solved <span class="bold">150+</span> problems </li>
-                      </div>
-                      <a href="https://www.codechef.com/users/amit_3201" target="_blank"><div class="info_btn ">More</div></a>
-                  </div>
-
-               </div>
-            </div>
-         </div>
+    <div class="console" aria-labelledby="katlas-title">
+      <div class="console__bar">
+        <span class="console__name" id="katlas-title">katlas</span>
+        <span class="console__meta">autonomous software engineer</span>
+        <span class="console__run">run #4182</span>
       </div>
-     </section>
-     <!-- ---- Contact Me section --- -->
-     <section id="contact" class="contact">
-      <div class="contact_text">
-         <h3>Contact <span style="color: #0ef;">Me</span></h3>
-         <h4>Let's Work together</h4>
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat hic, odio recusandae corrupti, sit repellendus quia, harum quod officia enim ipsam distinctio quaerat? Fugiat optio dicta, ea autem tenetur quisquam.</p>
-         <div class="contact_list">
-            <li><i class='bx bx-send' ></i>   aroy104321@gmail.com</li>
-            <li><i class='bx bx-phone' ></i>  +91 - 6000108469</li>
-         </div>
-         <div class="contact_icons">
-            <a href="https://www.linkedin.com/in/amit-roy-b28302241/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-            <a href="https://github.com/Amit-Roy-github" target="_blank"><i class='bx bxl-github' ></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100026051958466" target="_blank"><i class='bx bxl-facebook-circle' ></i></a>
-            <a href="https://www.instagram.com/aroy104321/" target="_blank"><i class='bx bxl-twitter'></i></a>
-         </div>
-      </div>
-      <div class="contact_form">
-         <form action="">
-            <input type="text" placeholder="Enter Your Name"  id="name" class="name">
-            <input type="text" placeholder="Enter Your Email"  id="email"  >
-            <input type="text" placeholder="Enter Your Subject"  id="subject">
-            <textarea name="" id="text" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
-            <div   class="submit" id="submit" onclick="message()" >submit </div>
-            <div class="messege">
-               <div class="success" id="success">
-                  Your messege sent successfully  !
-               </div>
-               <div class="danger" id="danger">
-                  Feilds can't be empty.
-               </div>
-            </div>
-         </form>
-      </div>
-     </section>
 
-     <script src="../js/index.js"></script>
-     <script src="https://smtpjs.com/v3/smtp.js">
-   </script>
+      <div class="console__body">
+        <div class="pipe-wrap">
+        <ol class="pipe" id="pipe">
+          <li class="pipe__rail" aria-hidden="true"><span class="pipe__fill"></span></li>
+          <li class="pipe__step" data-at="0.00"><i class="pipe__dot"></i><span>queued</span></li>
+          <li class="pipe__step" data-at="0.13"><i class="pipe__dot"></i><span>branch</span></li>
+          <li class="pipe__step" data-at="0.29"><i class="pipe__dot"></i><span>implement</span></li>
+          <li class="pipe__step" data-at="0.45"><i class="pipe__dot"></i><span>self-QA</span></li>
+          <li class="pipe__step" data-at="0.60"><i class="pipe__dot"></i><span>review</span></li>
+          <li class="pipe__step pipe__step--gate" data-at="0.72"><i class="pipe__dot"></i><span>gate</span></li>
+          <li class="pipe__step" data-at="0.86"><i class="pipe__dot"></i><span>merge</span></li>
+          <li class="pipe__step" data-at="1.00"><i class="pipe__dot"></i><span>deploy</span></li>
+        </ol>
+        <p class="pipe__off" id="pipeOff">Low confidence: back to a human.</p>
+        </div>
+
+        <p class="console__note">
+          Claude Opus and MCP behind a crash-safe job queue. A fresh EC2 box per ticket,
+          branches that resume rather than restart across review rounds, and a confidence
+          gate that routes risky work back to a person instead of shipping it.
+        </p>
+
+        <dl class="stats">
+          <div><dt>Tickets shipped end to end</dt><dd>100+</dd></div>
+          <div><dt>Core workflows now run by AI</dt><dd>~15%</dd></div>
+          <div><dt>Transactions a day, at Zupee</dt><dd>30–40K</dd></div>
+          <div><dt>LeetCode rating, top 1.01%</dt><dd>2181</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= WORK ========================= -->
+<section class="band" id="work">
+  <div class="shell">
+    <h2 class="head">Work</h2>
+
+    <article class="entry">
+      <div class="entry__head">
+        <h3>Khata Buddy<span class="entry__role">Software Engineer</span></h3>
+        <p class="entry__when">Apr 2026 — Present</p>
+      </div>
+      <ul class="points">
+        <li>
+          Built <b>Katlas</b>, an autonomous software engineer on Claude Opus and MCP. It takes a
+          triaged support ticket and carries it through branch, implementation, self-QA, human
+          review, merge and production deploy. <b>100+ production tickets</b> shipped end to end
+          in about two months.
+        </li>
+        <li>
+          Built a production <b>tool-using LLM agent</b> — one engine behind web, mobile and
+          WhatsApp — that executes real operations instead of answering questions. RAG on MongoDB
+          Atlas, an MCP tool registry, vision bill-scan, OpenAI to Gemini failover, and LLM-judged
+          relevancy scoring with token and cost accounting, so quality is measured rather than
+          assumed. Manual data entry dropped <b>~80%</b>.
+        </li>
+        <li>
+          Profiling-driven <b>performance engineering</b> across database, service and client.
+          An <span class="num">O(n×m)</span> to <span class="num">O(m)</span> fix took a hot render
+          path from <span class="num">827 ms</span> to <span class="num">~100 ms</span>; document
+          generation went <span class="num">~1 s</span> to <span class="num">~550 ms</span>;
+          interaction latency dropped <span class="num">~950 ms</span> to
+          <span class="num">40–90 ms</span>.
+        </li>
+        <li>
+          Built the <b>delivery platform</b> the team ships on — a notification backbone where a new
+          alert stream is a single routing entry (merge, deploy, Katlas, business events), a GitHub
+          Actions to S3 frontend pipeline, and a lock-guarded deploy runner.
+        </li>
+        <li>
+          Extended the <b>billing platform</b> with prorated upgrades, coupons, custom plans and a
+          wallet, then shipped a self-serve admin console for sales and ops.
+          <b>~70% of billing operations</b> now need no engineer.
+        </li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry__head">
+        <h3>Zupee<span class="entry__role">Software Development Engineer</span></h3>
+        <p class="entry__when">Jan 2025 — Feb 2026</p>
+      </div>
+      <ul class="points">
+        <li>
+          Built a centralized, idempotent <b>bootstrap for AWS SQS and SNS provisioning</b> across the
+          organisation's microservices. Queues and topics are declared once and created once at
+          service startup — safe to re-run, no drift — retiring the scattered per-service creation
+          that had been falling out of sync.
+        </li>
+        <li>
+          Developed <b>payment and subscription workflows</b> processing
+          <span class="num">30–40K transactions a day</span> — Juspay and PhonePe integrations,
+          payment-due notifications, and retry jobs for failed deposits — improving payment success
+          and renewal rates.
+        </li>
+        <li>
+          Developed the <b>user-segmentation system</b> — static, live and derived segments built
+          from query rules and daily pipelines — powering segment-driven UI, benefits, VIP handling
+          and personalised offers.
+        </li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= PROJECTS ======================= -->
+<section class="band" id="projects">
+  <div class="shell">
+    <h2 class="head">Projects</h2>
+
+    <article class="proj">
+      <div class="proj__head">
+        <h3>Agent Deck</h3>
+        <p class="proj__when">Jul 2026 — Present</p>
+      </div>
+      <p class="proj__tag">A control deck for mixed human and AI teams</p>
+      <ul class="points">
+        <li>
+          A team of AI agents and humans works in one channel — and the <b>manager can itself be an
+          agent</b>, owning and controlling the agents under it through an ownership-derived
+          permission engine. No stored roles, one flat Member model, and any member can talk to any
+          other: human to agent, agent to agent.
+        </li>
+        <li>
+          Each agent is a LangGraph-orchestrated ReAct agent with its own provider, model and
+          reasoning effort, persistent memory and auto-compacting context.
+        </li>
+      </ul>
+      <p class="stack">Python, FastAPI, LangGraph, MongoDB Atlas, SSE, GCP Cloud Run, React 19</p>
+      <p class="proj__links"><a href="https://github.com/Amit-Roy-github/agent-deck" target="_blank" rel="noopener">GitHub</a></p>
+    </article>
+
+    <article class="proj">
+      <div class="proj__head">
+        <h3>Agent Hive</h3>
+        <p class="proj__when">Jun 2026</p>
+      </div>
+      <p class="proj__tag">A live monitor and shared channel for AI coding agents</p>
+      <ul class="points">
+        <li>
+          A browser <b>control room for AI coding agents</b> on the Claude Agent SDK. Every session
+          is tailed live, agents are launched, resumed and steered from the UI, and a permission
+          gate lets safe tools run while risky ones pause for an Allow or Deny card over SSE.
+        </li>
+        <li>
+          A shared team channel where agents and humans talk in one thread, with per-agent MCP
+          tools, exactly-once delivery and a loop guard against agent-to-agent ping-pong.
+          Claude, Codex, Antigravity and a human developer debated trade-offs in-channel and
+          converged on a pinned decision.
+        </li>
+      </ul>
+      <p class="stack">Node.js, Claude Agent SDK, MCP, SSE</p>
+      <p class="proj__links">
+        <a href="https://github.com/Amit-Roy-github/agent-hive" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/posts/amit-roy-b28302241_watch-coordinate-your-ai-agents-live-activity-7475375143049908224-ctuC" target="_blank" rel="noopener">Demo post</a>
+      </p>
+    </article>
+
+    <article class="proj">
+      <div class="proj__head">
+        <h3>AI Notes &amp; AI Typing</h3>
+        <p class="proj__when">Jul 2026 — Present</p>
+      </div>
+      <p class="proj__tag">Two live products on one shared, open-source contract</p>
+      <ul class="points">
+        <li>
+          <b>AI Notes</b> — rich-text notes with an AI edit box. Say what to change and Gemini
+          rewrites only that, under a constrained JSON schema and editor-safe HTML, or answers a
+          question about the note in place. Anonymous first; your data is claimed on sign-in.
+        </li>
+        <li>
+          <b>AI Typing Practice</b> — describe what you want to type, in code, interview problems,
+          any subject, even in Hinglish, and Gemini generates the passage in the right shape, with
+          live words-per-minute and accuracy.
+        </li>
+        <li>
+          <span class="mono">@roshx/core</span> and <span class="mono">@roshx/ui</span> are published
+          to npm — one contract shared by server and web, so a mismatch breaks at compile time.
+        </li>
+      </ul>
+      <p class="stack">React 19, TypeScript, Tailwind v4, Express, MongoDB, Gemini, Cloud Run</p>
+      <p class="proj__links">
+        <a href="https://roshx-web-mfjdy4tezq-el.a.run.app/notes" target="_blank" rel="noopener">Open Notes</a>
+        <a href="https://roshx-web-mfjdy4tezq-el.a.run.app/practice" target="_blank" rel="noopener">Open Typing</a>
+        <a href="https://www.npmjs.com/package/@roshx/ui" target="_blank" rel="noopener">npm</a>
+        <a href="https://github.com/Amit-Roy-github/roshx-web" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </article>
+  </div>
+</section>
+
+<!-- ======================== PROOF ========================= -->
+<section class="band" id="proof">
+  <div class="shell">
+    <h2 class="head">Achievements</h2>
+
+    <div class="rank">
+      <div class="rank__row">
+        <p class="rank__site">LeetCode</p>
+        <p class="rank__badge">Guardian</p>
+        <p class="rank__nums"><span class="num">2181</span> rating, top <span class="num">1.01%</span> &nbsp; <span class="num">1800+</span> solved</p>
+        <p class="rank__link"><a href="https://leetcode.com/u/_Brahmacharya_/" target="_blank" rel="noopener">Profile</a></p>
+      </div>
+      <p class="rank__sub">
+        All-India rank <span class="num">19</span> in
+        <a href="https://drive.google.com/file/d/1HaS3a_TtWyjVvliF-UKzXH0CqJFzhj2E/view?usp=sharing" target="_blank" rel="noopener">Weekly 412</a>
+        &nbsp; All-India rank <span class="num">34</span> in
+        <a href="https://drive.google.com/file/d/1wS7tRFQ0xwps5fJpS2vUkoj7KVnmGlRy/view?usp=sharing" target="_blank" rel="noopener">Biweekly 129</a>
+      </p>
+
+      <div class="rank__row">
+        <p class="rank__site">Codeforces</p>
+        <p class="rank__badge">Expert</p>
+        <p class="rank__nums"><span class="num">1615</span> rating &nbsp; <span class="num">700+</span> solved</p>
+        <p class="rank__link"><a href="https://codeforces.com/profile/Amit_104" target="_blank" rel="noopener">Profile</a></p>
+      </div>
+
+      <div class="rank__row">
+        <p class="rank__site">CodeChef</p>
+        <p class="rank__badge">3 star</p>
+        <p class="rank__nums"><span class="num">1739</span> rating</p>
+        <p class="rank__link"><a href="https://www.codechef.com/users/amit_3201" target="_blank" rel="noopener">Profile</a></p>
+      </div>
+
+      <div class="rank__row">
+        <p class="rank__site">GeeksforGeeks</p>
+        <p class="rank__badge">4 star</p>
+        <p class="rank__nums"></p>
+        <p class="rank__link"><a href="https://www.geeksforgeeks.org/user/aroy10iaoi/" target="_blank" rel="noopener">Profile</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== SKILLS ======================== -->
+<section class="band" id="skills">
+  <div class="shell">
+    <h2 class="head">Skills</h2>
+    <dl class="kit">
+      <dt>Languages</dt>
+      <dd>C/C++, JavaScript, TypeScript, Python, Data Structures &amp; Algorithms, OOP</dd>
+      <dt>LLM &amp; GenAI</dt>
+      <dd>Tool-using agents, RAG, MCP, LangGraph, evaluation, multimodal, Claude / OpenAI / Gemini</dd>
+      <dt>Backend &amp; web</dt>
+      <dd>Node.js, Express, FastAPI, Kafka, MongoDB Atlas, Redis, React, Tailwind CSS</dd>
+      <dt>Cloud &amp; DevOps</dt>
+      <dd>AWS (EC2, S3, SQS/SNS), GCP Cloud Run, Docker, Kubernetes, CI/CD, Git, OAuth / OIDC</dd>
+    </dl>
+
+  </div>
+</section>
+
+<!-- ====================== EDUCATION ======================= -->
+<section class="band" id="education">
+  <div class="shell">
+    <h2 class="head">Education</h2>
+    <div class="edu">
+      <h3>National Institute of Technology, Silchar</h3>
+      <p>B.Tech, Electronics and Communication Engineering &nbsp; CGPA <span class="num">8.35</span></p>
+      <p class="edu__when">Graduated 2025 &nbsp; Assam, India</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CONTACT ======================== -->
+<section class="band band--end" id="contact">
+  <div class="shell">
+    <h2 class="head">Contact</h2>
+    <p class="contact__lede">
+      Open to roles where agentic AI sits on top of real backend engineering.
+      The fastest way to reach me is email.
+    </p>
+
+    <ul class="reach">
+      <li>
+        <span class="reach__what">Email</span>
+        <a class="reach__val" href="mailto:aroy104321@gmail.com">aroy104321@gmail.com</a>
+        <button class="copy" type="button" data-copy="aroy104321@gmail.com">Copy</button>
+      </li>
+      <li>
+        <span class="reach__what">Phone</span>
+        <a class="reach__val" href="tel:+917099254028">+91 70992 54028</a>
+        <button class="copy" type="button" data-copy="+917099254028">Copy</button>
+      </li>
+      <li>
+        <span class="reach__what">LinkedIn</span>
+        <a class="reach__val" href="https://www.linkedin.com/in/amit-roy-b28302241/" target="_blank" rel="noopener">amit-roy-b28302241</a>
+      </li>
+      <li>
+        <span class="reach__what">GitHub</span>
+        <a class="reach__val" href="https://github.com/Amit-Roy-github" target="_blank" rel="noopener">Amit-Roy-github</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="shell foot__inner">
+    <p>Amit Roy</p>
+    <p><a href="./Amit-Roy-Resume.pdf" target="_blank" rel="noopener">Resume</a></p>
+  </div>
+</footer>
+
+<script src="./js/main.js" defer></script>
 </body>
 </html>
