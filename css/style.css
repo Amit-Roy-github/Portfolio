@@ -33,7 +33,13 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+/* overscroll-behavior stops the rubber-band bounce: scrolling up at the top
+   used to stretch the page open over empty space before snapping back. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
+  overscroll-behavior: none;
+}
 
 body {
   margin: 0;
